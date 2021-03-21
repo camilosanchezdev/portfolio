@@ -1,0 +1,20 @@
+.section-about {
+  min-height: 80vh;
+}
+.text {
+  font-size: 1.2rem;
+}
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image img {
+  border-radius: 20px;
+}
+@media (max-width: 700px) {
+  .image,
+  .text {
+    margin-bottom: 50px;
+  }
+}

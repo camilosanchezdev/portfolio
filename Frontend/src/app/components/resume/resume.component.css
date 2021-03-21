@@ -1,0 +1,40 @@
+.resume {
+  min-height: 1000px;
+}
+.card-history .date p {
+  font-size: 1.6rem;
+}
+.skills ul li {
+  list-style: none;
+}
+.skills ul li i {
+  font-size: 40px;
+}
+.item-card {
+  position: relative im !important;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.card-history p {
+  font-size: 1.2rem !important;
+}
+@media (max-width: 990px) {
+  .skills-first,
+  .skills-second {
+    max-width: 50%;
+    flex: 50%;
+  }
+}
+@media (max-width: 777px) {
+  .date-card {
+    display: none !important;
+  }
+  .btn-card {
+    width: 100% !important;
+  }
+  .card-history {
+    flex-direction: column !important;
+  }
+}
