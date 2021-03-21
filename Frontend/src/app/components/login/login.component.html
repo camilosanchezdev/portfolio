@@ -1,0 +1,20 @@
+<section class="mt-5 vh-100">
+    <h2 class="text-light text-center mb-5">Login</h2>
+    <div class="row pb-5 text-light justify-content-center align-items-center h-75">
+        <form class="w-50" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="username" formControlName="username" id="username" 
+                    placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" formControlName="password" id="Enter password" placeholder="Password" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary w-100">Enter</button>
+            <div class="alert alert-danger mt-3" [hidden]="!error">{{error}}</div>
+        </form>
+    </div>
+
+</section>
