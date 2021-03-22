@@ -18,14 +18,27 @@ import { AdminComponent } from './components/admin/admin.component';
 // Forms
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+// Security
+import { BeforeloginService } from './services/beforelogin.service';
+import { AfterloginService } from './services/afterlogin.service';
 const routes: Routes = [
   { path: '', component: HomeComponent },
+
   { path: 'about', component: AboutComponent },
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'resume', component: ResumeComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'admin', component: AdminComponent },
+  {
+    path: 'login',
+    component: LoginComponent,
+    canActivate: [BeforeloginService],
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [AfterloginService],
+  },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({
