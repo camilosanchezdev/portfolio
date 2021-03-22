@@ -21,6 +21,10 @@ import { HttpClientModule } from '@angular/common/http';
 // Security
 import { BeforeloginService } from './services/beforelogin.service';
 import { AfterloginService } from './services/afterlogin.service';
+// Toastr
+import { ToastrModule } from 'ngx-toastr';
+// Spinner
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 const routes: Routes = [
   { path: '', component: HomeComponent },
 
@@ -60,6 +64,11 @@ const routes: Routes = [
     MatDialogModule,
     ReactiveFormsModule,
     HttpClientModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+    }),
+    ProgressSpinnerModule,
   ],
   exports: [RouterModule],
   providers: [],

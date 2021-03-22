@@ -2,7 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactPortfolio;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -31,3 +32,8 @@ Route::group([
     Route::post('register', 'AuthController@register');
 
 });
+Route::post('contact', 'ContactController@sendEmail');
+
+// Route::get('/email', function() {
+//     Mail::to('camilo8525@gmail.com')->send(new ContactPortfolio() );
+// });
