@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
+import { ReCaptchaV3Service } from 'ng-recaptcha';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -14,9 +15,10 @@ export class ContactComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private recaptchaV3Service: ReCaptchaV3Service
   ) {}
-  private baseUrl = 'http://localhost/portfolio/public/api/contact';
+  private baseUrl = 'https://camilosanchez.net/api/contact';
   ngOnInit(): void {
     this.checkoutForm = this.formBuilder.group({
       name: [null, Validators.required],
@@ -26,6 +28,7 @@ export class ContactComponent implements OnInit {
     });
   }
   onSubmit() {
+    this.recaptchaV3Service.execute('importantAction').subscribe();
     this.progressSpinner = true;
     return this.http.post(this.baseUrl, this.checkoutForm.value).subscribe(
       (data) => {
@@ -37,5 +40,8 @@ export class ContactComponent implements OnInit {
         this.toastr.success('Thank you!', 'Message Sent');
       }
     );
+  }
+  resolved(captchaResponse: string) {
+    console.log(`Resolved captcha with response: ${captchaResponse}`);
   }
 }

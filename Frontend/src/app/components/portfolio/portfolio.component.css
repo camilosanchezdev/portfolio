@@ -1,8 +1,11 @@
+.section-portfolio {
+  min-height: 100vh;
+}
 .navegacion {
   font-size: 1.5rem;
 }
-.card {
-  cursor: pointer;
+.card a:hover {
+  text-decoration: none;
 }
 .card:hover .card-button {
   background-color: white;
@@ -16,7 +19,8 @@
   width: 80%;
   margin-left: 10%;
   bottom: -20px;
-  background-color: rgb(52, 58, 64);
+  /* background-color: #343a40; */
+  background-color: #0777d3;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.125);
   transition: all 0.3s ease;
@@ -28,4 +32,26 @@
 .card-button:hover h5,
 .card-button:hover p {
   color: rgb(52, 58, 64) !important;
+}
+/* 
+ */
+.portfolio-card {
+  border-radius: 20px;
+  box-shadow: 0 15px 25px 0 rgb(0 0 0 / 10%);
+  min-height: 100vh;
+}
+.nav-link {
+  color: #2196f3 !important;
+}
+.header-card {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  min-height: 30vh;
+  background-color: #2196f3;
+  background-image: url("./../../../assets/header-bg.png");
+  background-size: 100%;
+}
+.text-dark:hover {
+  color: #2196f3 !important;
+  text-decoration: none !important;
 }

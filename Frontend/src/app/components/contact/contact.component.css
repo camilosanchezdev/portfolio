@@ -1,5 +1,10 @@
+.section-contact {
+  min-height: 100vh;
+}
 .card {
-  background-color: rgba(63, 76, 89, 1);
+  background-color: #2196f3;
+  background-image: url("./../../../assets/header-bg.png");
+  background-size: 100%;
   height: 30%;
   cursor: pointer;
 }
@@ -41,6 +46,20 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.53);
 }
+.home-card {
+  border-radius: 20px;
+  box-shadow: 0 15px 25px 0 rgb(0 0 0 / 10%);
+  min-height: 100vh;
+}
+.header-card {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  min-height: 30vh;
+  background-color: #2196f3;
+  background-image: url("./../../../assets/header-bg.png");
+  background-size: 100%;
+}
+
 @media (max-width: 1000px) {
   .row {
     flex-direction: column;
@@ -60,5 +79,10 @@
   .contact-cards .card {
     margin: 10px;
     padding: 10px;
+  }
+}
+@media (max-width: 550px) {
+  .contact-cards i {
+    margin-left: 1rem !important;
   }
 }

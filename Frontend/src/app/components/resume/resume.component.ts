@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CertificadosService } from '../../services/certificados.service';
 import { Inject } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 import {
   MatDialog,
   MatDialogRef,
@@ -12,6 +13,31 @@ import {
   styleUrls: ['./resume.component.css'],
 })
 export class ResumeComponent implements OnInit {
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['<', '>'],
+    autoWidth: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      400: {
+        items: 1,
+      },
+      740: {
+        items: 1,
+      },
+      940: {
+        items: 1,
+      },
+    },
+    nav: true,
+  };
   _certificados = [];
   constructor(
     public dialog: MatDialog,

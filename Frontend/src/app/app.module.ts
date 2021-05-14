@@ -7,9 +7,9 @@ import { HomeComponent } from './components/home/home.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { AboutComponent } from './components/about/about.component';
 // Carousel
-import { CarouselModule } from 'primeng/carousel';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+//import { CarouselModule } from 'primeng/carousel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //
 import { MatDialogModule } from '@angular/material/dialog';
@@ -25,11 +25,21 @@ import { AfterloginService } from './services/afterlogin.service';
 import { ToastrModule } from 'ngx-toastr';
 // Spinner
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+// Recaptcha
+import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
+import { PortfoliocardComponent } from './components/portfoliocard/portfoliocard.component';
+// Modal
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 const routes: Routes = [
   { path: '', component: HomeComponent },
-
-  { path: 'about', component: AboutComponent },
-  { path: 'portfolio', component: PortfolioComponent },
+  {
+    path: 'portfolio',
+    component: PortfolioComponent,
+  },
+  {
+    path: 'portfolio/:id',
+    component: PortfoliocardComponent,
+  },
   { path: 'resume', component: ResumeComponent },
   { path: 'contact', component: ContactComponent },
   {
@@ -52,9 +62,9 @@ const routes: Routes = [
     PortfolioComponent,
     ResumeComponent,
     ContactComponent,
-    AboutComponent,
     LoginComponent,
     AdminComponent,
+    PortfoliocardComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,9 +79,16 @@ const routes: Routes = [
       preventDuplicates: true,
     }),
     ProgressSpinnerModule,
+    RecaptchaV3Module,
+    NgbModalModule,
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [
+    {
+      provide: RECAPTCHA_V3_SITE_KEY,
+      useValue: '6LfxRYoaAAAAAPut6ryFw7YgERI42i90ktKGH6GL',
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

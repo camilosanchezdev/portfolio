@@ -1,3 +1,9 @@
+footer {
+  background-color: #2196f3;
+  background-image: url(//lmpixels.com/wp/aveo/wp-content/uploads/2017/09/sp_main_bg.png);
+  background-size: 100%;
+}
+
 @media (max-width: 800px) {
   .container {
     max-width: 100%;

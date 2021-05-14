@@ -1,116 +1,100 @@
-<section class="w-100 d-flex flex-column mt-5 justify-content-center">
-    <h2 class="text-light text-center">Portfolio</h2>
+<section class="portfolio-card w-100 mb-5">
+    <div class="header-card w-100 border border-primary d-flex flex-row justify-content-between">
+        <div class="image d-none d-md-flex col-md-4 justify-content-center">
+            <img class="w-75" src="../assets/web-portfolio.png" />
+        </div>
+        <div class="text text-light col-md-8 d-flex justify-content-center flex-column align-items-center">
+            <h1>Portfolio</h1>
+            <h2 class="h5-sm">All my projects</h2>
+        </div>
+
+    </div>
     <div class="navegacion w-100 mb-4 d-flex justify-content-center">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPortfolio"
                 aria-controls="navbarPortfolio" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        
+
             <div class="collapse navbar-collapse" id="navbarPortfolio">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto mt-5">
                     <li class="nav-item active mr-4">
-                        <a class="nav-link" href="#">All <span class="sr-only">(current)</span></a>
+                        <a class="text-dark" routerLink="/portfolio">All <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mr-4">
-                        <a class="nav-link" href="#">Web Development</a>
+                        <a class="text-dark" routerLink="/portfolio">Web Development</a>
                     </li>
                     <li class="nav-item mr-4">
-                        <a class="nav-link" href="#">Software</a>
+                        <a class="text-dark" routerLink="/portfolio">Software</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a class="text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             By language
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">C#</a>
-                            <a class="dropdown-item" href="#">JavaScript</a>
-                            <a class="dropdown-item" href="#">PHP</a>
+                            <a class="dropdown-item" routerLink="/portfolio">C#</a>
+                            <a class="dropdown-item" routerLink="/portfolio">JavaScript</a>
+                            <a class="dropdown-item" routerLink="/portfolio">PHP</a>
                         </div>
                     </li>
                 </ul>
-        
+
             </div>
         </nav>
     </div>
-    <div class="cards flex-wrap w-100 d-flex flex-row justify-content-center">
-        <div class="card bg-dark mb-5 mr-4 ml-4 rounded" style="width: 18rem;">
-            <img class="card-img-top" src="http://droitthemes.com/html/wavee/img/case_one/case_pr_one.jpg" alt="Card image cap">
-            <div class="card-button pt-1 pb-1">
-                <h5 class="card-title text-light text-center mb-1">Tasks</h5>
-                <p class="text-light text-center mb-1">Angular</p>
-            </div>
+    <div class="content-card row mx-3 my-5 d-flex align-items-center justify-content-center pb-5">
+        <div class="cards flex-wrap w-100 d-flex flex-row justify-content-center">
+            <a routerLink="dentalclinic" class="card bg-dark mb-5 mr-4 ml-4 rounded" style="width: 18rem;">
+                <img class="card-img-top" src="../../../assets/Proyectos/dentalclinic/screenshot-square.png"
+                    alt="Card image cap">
+                <div class="card-button pt-1 pb-1">
+                    <h5 class="card-title text-light text-center mb-1">DentalClinic</h5>
+                    <p class="text-light text-center mb-1">ASP .NET Core + Angular</p>
+                </div>
+            </a>
+            <a routerLink="tasks" class="card bg-dark mb-5 mr-4 ml-4 rounded" style="width: 18rem;">
+                <img class="card-img-top" src="../../../assets/Proyectos/tasks/tasks-square.png" alt="Card image cap">
+                <div class="card-button pt-1 pb-1">
+                    <h5 class="card-title text-light text-center mb-1">Tasks</h5>
+                    <p class="text-light text-center mb-1">Laravel + React</p>
+                </div>
+            </a>
+            <a routerLink="studentsystem" class="card bg-dark mb-5 mr-4 ml-4 rounded" style="width: 18rem;">
+                <img class="card-img-top" src="../../../assets/Proyectos/studentsystem/student-square.png"
+                    alt="Card image cap">
+                <div class="card-button pt-1 pb-1">
+                    <h5 class="card-title text-light text-center mb-1">Student System</h5>
+                    <p class="text-light text-center mb-1">Windows Forms .NET</p>
+                </div>
+            </a>
+            <a routerLink="password-generator" class="card bg-dark mb-5 mr-4 ml-4 rounded" style="width: 18rem;">
+                <img class="card-img-top" src="../../../assets/Proyectos/passwordgenerator/passwordgenerator-square.png"
+                    alt="Card image cap">
+                <div class="card-button pt-1 pb-1">
+                    <h5 class="card-title text-light text-center mb-1">Password Generator</h5>
+                    <p class="text-light text-center mb-1">WPF .NET</p>
+                </div>
+            </a>
+            <a routerLink="memory-game" class="card bg-dark mb-5 mr-4 ml-4 rounded" style="width: 18rem;">
+                <img class="card-img-top" src="../../../assets/Proyectos/memorygame/memory-game-square.png"
+                    alt="Card image cap">
+                <div class="card-button pt-1 pb-1">
+                    <h5 class="card-title text-light text-center mb-1">Memory Game</h5>
+                    <p class="text-light text-center mb-1">Angular</p>
+                </div>
+            </a>
+            <a routerLink="personalcard" class="card bg-dark mb-5 mr-4 ml-4 rounded" style="width: 18rem;">
+                <img class="card-img-top" src="../../../assets/Proyectos/personalcard/personalcard-square.png"
+                    alt="Card image cap">
+                <div class="card-button pt-1 pb-1">
+                    <h5 class="card-title text-light text-center mb-1">Personal Card</h5>
+                    <p class="text-light text-center mb-1">Angular + Bootstrap</p>
+                </div>
+            </a>
         </div>
-        <div class="card bg-dark mb-5 mr-4 ml-4 rounded" style="width: 18rem;">
-            <img class="card-img-top" src="http://droitthemes.com/html/wavee/img/case_one/case_pr_two.jpg" alt="Card image cap">
-            <div class="card-button pt-1 pb-1">
-                <h5 class="card-title text-light text-center mb-1">Tasks</h5>
-                <p class="text-light text-center mb-1">ASP Net Core</p>
-            </div>
-        </div>
-        <div class="card bg-dark mb-5 mr-4 ml-4 rounded" style="width: 18rem;">
-            <img class="card-img-top" src="http://droitthemes.com/html/wavee/img/case_one/case_pr_four.jpg" alt="Card image cap">
-            <div class="card-button pt-1 pb-1">
-                <h5 class="card-title text-light text-center mb-1">Tasks</h5>
-                <p class="text-light text-center mb-1">PHP</p>
-            </div>
-        </div>
-        <div class="card bg-dark mb-5 mr-4 ml-4 rounded" style="width: 18rem;">
-            <img class="card-img-top" src="http://droitthemes.com/html/wavee/img/case_one/case_pr_seven.jpg" alt="Card image cap">
-            <div class="card-button pt-1 pb-1">
-                <h5 class="card-title text-light text-center mb-1">Tasks</h5>
-                <p class="text-light text-center mb-1">React</p>
-            </div>
-        </div>
-        <div class="card bg-dark mb-5 mr-4 ml-4 rounded" style="width: 18rem;">
-            <img class="card-img-top" src="http://droitthemes.com/html/wavee/img/case_one/case_pr_seven.jpg" alt="Card image cap">
-            <div class="card-button pt-1 pb-1">
-                <h5 class="card-title text-light text-center mb-1">Tasks</h5>
-                <p class="text-light text-center mb-1">JavaScript</p>
-            </div>
-        </div>
-        <div class="card bg-dark mb-5 mr-4 ml-4 rounded" style="width: 18rem;">
-            <img class="card-img-top" src="http://droitthemes.com/html/wavee/img/case_one/case_pr_nine.jpg" alt="Card image cap">
-            <div class="card-button pt-1 pb-1">
-                <h5 class="card-title text-light text-center mb-1">Tasks</h5>
-                <p class="text-light text-center mb-1">Node JS</p>
-            </div>
-        </div>
-        <!-- <div class="card bg-dark mb-5 mr-4 ml-4" style="width: 18rem;">
-            <img class="card-img-top" src="http://droitthemes.com/html/wavee/img/case_one/case_pr_two.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title text-light">Password Generator</h5>
-                <a href="#" class="btn btn-success w-100">View</a>
-            </div>
-        </div>
-        <div class="card bg-dark mb-5 mr-4 ml-4" style="width: 18rem;">
-            <img class="card-img-top" src="http://droitthemes.com/html/wavee/img/case_one/case_pr_three.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title text-light">Card title</h5>
-                <a href="#" class="btn btn-success w-100">View</a>
-            </div>
-        </div>
-        <div class="card bg-dark mb-5 mr-4 ml-4" style="width: 18rem;">
-            <img class="card-img-top" src="http://droitthemes.com/html/wavee/img/case_one/case_pr_four.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title text-light">Card title</h5>
-                <a href="#" class="btn btn-success w-100">View</a>
-            </div>
-        </div>
-        <div class="card bg-dark mb-5 mr-4 ml-4" style="width: 18rem;">
-            <img class="card-img-top" src="http://droitthemes.com/html/wavee/img/case_one/case_pr_seven.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title text-light">Card title</h5>
-                <a href="#" class="btn btn-success w-100">View</a>
-            </div>
-        </div>
-        <div class="card bg-dark mb-5 mr-4 ml-4" style="width: 18rem;">
-            <img class="card-img-top" src="http://droitthemes.com/html/wavee/img/case_one/case_pr_nine.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title text-light">Card title</h5>
-                <a href="#" class="btn btn-success w-100">View</a>
-            </div>
-        </div> -->
+
     </div>
+
+
 </section>

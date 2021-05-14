@@ -1,0 +1,57 @@
+.btn-carousel {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.carousel {
+  width: 80%;
+  margin: 0 auto;
+}
+.owl-item {
+  display: flex !important;
+  justify-content: center !important;
+}
+.owl-carousel .caption {
+  text-align: center;
+}
+.list-group-item:hover {
+  background-color: aliceblue;
+}
+#spinner {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#spinner::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.53);
+}
+.card-tech ul li i {
+  font-size: 40px !important;
+}
+.home-card {
+  border-radius: 20px;
+  box-shadow: 0 15px 25px 0 rgb(0 0 0 / 10%);
+  min-height: 100vh;
+}
+.header-card {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  min-height: 30vh;
+  background-color: #2196f3;
+  background-image: url("./../../../assets/header-bg.png");
+  background-size: 100%;
+}

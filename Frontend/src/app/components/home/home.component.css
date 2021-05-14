@@ -4,3 +4,16 @@
 .row i {
   font-size: 80px;
 }
+.home-card {
+  border-radius: 20px;
+  box-shadow: 0 15px 25px 0 rgb(0 0 0 / 10%);
+  min-height: 100vh;
+}
+.header-card {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  min-height: 30vh;
+  background-color: #2196f3;
+  background-image: url("./../../../assets/header-bg.png");
+  background-size: 100%;
+}
