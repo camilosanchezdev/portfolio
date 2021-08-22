@@ -1,0 +1,185 @@
+
+<div style="background-color: #f5f5f5">
+    <nav class="navbar navbar-expand-lg navbar-light mb-3" style="position: fixed; background-color: #f5f5f5; width: 100%; z-index: 99">
+        <a class="navbar-brand mx-5" [routerLink]="'.'">Camilo Sanchez</a>
+    
+        <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+            &#9776;
+        </button>
+    
+        <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse my-3">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link font-weight-bold text-red" [routerLink]="'.'" (click)="onClick('home')">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold" [routerLink]="'.'" (click)="onClick('whatido')">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold" [routerLink]="'.'" (click)="onClick('services')">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold" [routerLink]="'.'" (click)="onClick('portfolio')">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold" [routerLink]="'.'" (click)="onClick('resume')">Resume</a>
+                </li>
+                <li class="nav-item mx-3" style="border:1px solid gray; border-radius: 5px">
+                    <a class="nav-link font-weight-bold" [routerLink]="'.'" (click)="onClick('contact')">Let's Talk!</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section id="home">
+        <div style="height:100vh" class="row d-flex justify-content-center align-items-center py-5 mx-0">
+            <div class="col-lg-5 d-flex justify-content-center align-items-center">
+                <img src="../../../assets/img/test.png" id="img-logo"/>
+            </div>
+            <div class="col-lg-7 d-flex flex-column justify-content-start align-items-start">
+                <p class="title h0 font-weight-bold">Hi, I'm Camilo Sanchez</p>
+                <p class="title h0 font-weight-bold text-red">Full Stack Web Developer</p>
+            </div>
+        </div>
+    </section>
+   
+</div>
+<div class="container">
+    
+    <section class="my-5" id="whatido">
+        <h2 class="title h1 text-center">What I <span class="text-red">Do?</span></h2>
+        <p class="text-center">I can build any type of website and solve any Bug issue.</p>
+        <div class="row mt-5">
+            <div class="card-do col-lg-4">
+                <i class="bi bi-file-earmark-code-fill h0 text-red d-block text-center"></i>
+                <h4 class="h4 text-center font-weight-bold">Full Website creation</h4>
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci reiciendis
+                    officia
+                    dolorum
+                    sunt a sequi am.</p>
+            </div>
+            <div class="card-do col-lg-4">
+                <i class="bi bi-cart3 h0 text-red d-block text-center"></i>
+                <h4 class="h4 text-center font-weight-bold">Online store & shopping</h4>
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci reiciendis
+                    officia
+                    dolorum
+                    sunt a sequi am.</p>
+            </div>
+            <div class="card-do col-lg-4">
+                <i class="bi bi-bug-fill h0 text-red d-block text-center"></i>
+                <h4 class="h4 text-center font-weight-bold">Bug & Error Fixing</h4>
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci reiciendis
+                    officia
+                    dolorum
+                    sunt a sequi am.</p>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="card-do col-lg-6">
+                <i class="bi bi-file-image-fill h0 text-red d-block text-center"></i>
+                <h4 class="h4 text-center font-weight-bold">PSD to Code</h4>
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci reiciendis
+                    officia
+                    dolorum
+                    sunt a sequi am.</p>
+            </div>
+            <div class="card-do col-lg-6">
+                <i class="bi bi-lightning-fill h0 text-red d-block text-center"></i>
+                <h4 class="h4 text-center font-weight-bold">Maintenance</h4>
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci reiciendis officia
+                    dolorum
+                    sunt a sequi am.</p>
+            </div>
+        </div>
+    </section>
+    <section class="my-5 my-5 d-flex justify-content-center align-items-center flex-column" id="services" style="min-height: 100vh;">
+        <h2 class="title h1 text-center">What You'll <span class="text-red">Get?</span></h2>
+        <p class="text-center">It's just not a service, it's a relationship.</p>
+        <div class="row mt-5">
+            <div class="card-do col-lg-4">
+                <i class="bi bi-people-fill h0 text-red d-block text-center"></i>
+                <h4 class="h4 text-center font-weight-bold">Excelent Support</h4>
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci
+                    reiciendis
+                    officia
+                    dolorum
+                    sunt a sequi am.</p>
+            </div>
+            <div class="card-do col-lg-4">
+                <i class="bi bi-gem h0 text-red d-block text-center"></i>
+                <h4 class="h4 text-center font-weight-bold">Discussion & Sketch</h4>
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci
+                    reiciendis
+                    officia
+                    dolorum
+                    sunt a sequi am.</p>
+            </div>
+            <div class="card-do col-lg-4">
+                <i class="bi bi-bookmark-star-fill h0 text-red d-block text-center"></i>
+                <h4 class="h4 text-center font-weight-bold">Excellent Quality</h4>
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci
+                    reiciendis
+                    officia
+                    dolorum
+                    sunt a sequi am.</p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" style="min-height: 100vh;">
+        <h2 class="title h1 text-center mb-3">My <span class="text-red">Portfolio</span></h2>
+        <div class="row justify-content-center align-items-center">
+            <div style="background-color: #ffedf2" class="search-project mb-4">
+                <ul>
+                    <li class="text-red">All Projects</li>
+                    <li class="text-red">Web Development</li>
+                    <li class="text-red">Mobile App</li>
+                    <li class="text-red">Software</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card-project col-lg-4">
+                <img class="w-85" src="./../../../assets/img/project-example.png" alt="">
+                <h5 class="h6 mt-2">Web Design</h5>
+                <h4 class="h5 font-weight-bold">Mobile App landing design</h4>
+            </div>
+            <div class="card-project col-lg-4">
+                <img class="w-85" src="./../../../assets/img/project-example.png" alt="">
+                <h5 class="h6 mt-2">Web Design</h5>
+                <h4 class="h5 font-weight-bold">Mobile App landing design</h4>
+            </div>
+            <div class="card-project col-lg-4">
+                <img class="w-85" src="./../../../assets/img/project-example.png" alt="">
+                <h5 class="h6 mt-2">Web Design</h5>
+                <h4 class="h5 font-weight-bold">Mobile App landing design</h4>
+            </div>
+            <div class="card-project col-lg-4">
+                <img class="w-85" src="./../../../assets/img/project-example.png" alt="">
+                <h5 class="h6 mt-2">Web Design</h5>
+                <h4 class="h5 font-weight-bold">Mobile App landing design</h4>
+            </div>
+            <div class="card-project col-lg-4">
+                <img class="w-85" src="./../../../assets/img/project-example.png" alt="">
+                <h5 class="h6 mt-2">Web Design</h5>
+                <h4 class="h5 font-weight-bold">Mobile App landing design</h4>
+            </div>
+            <div class="card-project col-lg-4">
+                <img class="w-85" src="./../../../assets/img/project-example.png" alt="">
+                <h5 class="h6 mt-2">Web Design</h5>
+                <h4 class="h5 font-weight-bold">Mobile App landing design</h4>
+            </div>
+        </div>
+    </section>
+    <section class="my-5 my-5" id="resume">
+        <h2 class="title h1 text-center">Download <span class="text-red">Resume</span></h2>
+        <div class="row">
+            <p>Download Resume</p>
+        </div>
+    </section>
+    <section class="my-5 my-5" id="contact">
+        <h2 class="title h1 text-center">Lets <span class="text-red">Discuss?</span></h2>
+        <div class="row">
+            <p>Contact Now!</p>
+        </div>
+    </section>
+</div>
