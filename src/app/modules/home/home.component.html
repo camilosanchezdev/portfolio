@@ -1,8 +1,7 @@
 
 <div style="background-color: #f5f5f5">
     <nav class="navbar navbar-expand-lg navbar-light mb-3" style="position: fixed; background-color: #f5f5f5; width: 100%; z-index: 99">
-        <a class="navbar-brand mx-5" [routerLink]="'.'">Camilo Sanchez</a>
-    
+        <a class="navbar-brand mx-5 title" [routerLink]="'.'" (click)="onClick('home')"><i class="bi bi-laptop"></i> Camilo Sanchez</a>  
         <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
             &#9776;
         </button>
@@ -41,191 +40,23 @@
             </div>
         </div>
     </section>
-   
 </div>
 <div class="container">
     
     <section id="whatido" style="min-height: 100vh; padding-top: 150px">
-        <h2 class="title h1 text-center">What I <span class="text-red">Do?</span></h2>
-        <p class="text-center">I can build any type of website and solve any Bug issue.</p>
-        <div class="row mt-5">
-            <div class="card-do col-lg-4">
-                <i class="bi bi-file-earmark-code-fill h0 text-red d-block text-center"></i>
-                <h4 class="h4 text-center font-weight-bold">Full Website creation</h4>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci reiciendis
-                    officia
-                    dolorum
-                    sunt a sequi am.</p>
-            </div>
-            <div class="card-do col-lg-4">
-                <i class="bi bi-cart3 h0 text-red d-block text-center"></i>
-                <h4 class="h4 text-center font-weight-bold">Online store & shopping</h4>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci reiciendis
-                    officia
-                    dolorum
-                    sunt a sequi am.</p>
-            </div>
-            <div class="card-do col-lg-4">
-                <i class="bi bi-bug-fill h0 text-red d-block text-center"></i>
-                <h4 class="h4 text-center font-weight-bold">Bug & Error Fixing</h4>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci reiciendis
-                    officia
-                    dolorum
-                    sunt a sequi am.</p>
-            </div>
-        </div>
-        <div class="row mb-5">
-            <div class="card-do col-lg-6">
-                <i class="bi bi-file-image-fill h0 text-red d-block text-center"></i>
-                <h4 class="h4 text-center font-weight-bold">PSD to Code</h4>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci reiciendis
-                    officia
-                    dolorum
-                    sunt a sequi am.</p>
-            </div>
-            <div class="card-do col-lg-6">
-                <i class="bi bi-lightning-fill h0 text-red d-block text-center"></i>
-                <h4 class="h4 text-center font-weight-bold">Maintenance</h4>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci reiciendis officia
-                    dolorum
-                    sunt a sequi am.</p>
-            </div>
-        </div>
+        <app-about></app-about>
     </section>
     <section class="my-5 my-5 d-flex justify-content-center align-items-center flex-column" id="services" style="min-height: 100vh;">
-        <h2 class="title h1 text-center">What You'll <span class="text-red">Get?</span></h2>
-        <p class="text-center">It's just not a service, it's a relationship.</p>
-        <div class="row mt-5">
-            <div class="card-do col-lg-4">
-                <i class="bi bi-people-fill h0 text-red d-block text-center"></i>
-                <h4 class="h4 text-center font-weight-bold">Excelent Support</h4>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci
-                    reiciendis
-                    officia
-                    dolorum
-                    sunt a sequi am.</p>
-            </div>
-            <div class="card-do col-lg-4">
-                <i class="bi bi-gem h0 text-red d-block text-center"></i>
-                <h4 class="h4 text-center font-weight-bold">Discussion & Sketch</h4>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci
-                    reiciendis
-                    officia
-                    dolorum
-                    sunt a sequi am.</p>
-            </div>
-            <div class="card-do col-lg-4">
-                <i class="bi bi-bookmark-star-fill h0 text-red d-block text-center"></i>
-                <h4 class="h4 text-center font-weight-bold">Excellent Quality</h4>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, rerum modi adipisci
-                    reiciendis
-                    officia
-                    dolorum
-                    sunt a sequi am.</p>
-            </div>
-        </div>
+        <app-services></app-services>
     </section>
     <section id="portfolio" style="min-height: 100vh; padding-top: 100px">
-        <h2 class="title h1 text-center mb-3">My <span class="text-red">Portfolio</span></h2>
-        <div class="row justify-content-center align-items-center">
-            <div style="background-color: #ffedf2" class="search-project mb-4">
-                <ul>
-                    <li class="text-red">All Projects</li>
-                    <li class="text-red">Web Development</li>
-                    <li class="text-red">Mobile App</li>
-                    <li class="text-red">Software</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="card-project col-lg-4">
-                <img class="w-85" src="./../../../assets/img/project-example.png" alt="">
-                <h5 class="h6 mt-2">Web Design</h5>
-                <h4 class="h5 font-weight-bold">Mobile App landing design</h4>
-            </div>
-            <div class="card-project col-lg-4">
-                <img class="w-85" src="./../../../assets/img/project-example.png" alt="">
-                <h5 class="h6 mt-2">Web Design</h5>
-                <h4 class="h5 font-weight-bold">Mobile App landing design</h4>
-            </div>
-            <div class="card-project col-lg-4">
-                <img class="w-85" src="./../../../assets/img/project-example.png" alt="">
-                <h5 class="h6 mt-2">Web Design</h5>
-                <h4 class="h5 font-weight-bold">Mobile App landing design</h4>
-            </div>
-            <div class="card-project col-lg-4">
-                <img class="w-85" src="./../../../assets/img/project-example.png" alt="">
-                <h5 class="h6 mt-2">Web Design</h5>
-                <h4 class="h5 font-weight-bold">Mobile App landing design</h4>
-            </div>
-            <div class="card-project col-lg-4">
-                <img class="w-85" src="./../../../assets/img/project-example.png" alt="">
-                <h5 class="h6 mt-2">Web Design</h5>
-                <h4 class="h5 font-weight-bold">Mobile App landing design</h4>
-            </div>
-            <div class="card-project col-lg-4">
-                <img class="w-85" src="./../../../assets/img/project-example.png" alt="">
-                <h5 class="h6 mt-2">Web Design</h5>
-                <h4 class="h5 font-weight-bold">Mobile App landing design</h4>
-            </div>
-        </div>
+        <app-portfolio></app-portfolio>
     </section>
     <section class="my-5 my-5 d-flex flex-column justify-content-center align-items-center" id="resume" style="min-height: 100vh;">
-        <h2 class="title h1 text-center">Download <span class="text-red">Resume</span></h2>
-        <div class="row justify-content-center align-items-center">
-            <div class="col-lg-6">
-                <img src="./../../../assets/img/resume-logo.jpg" alt="" class="w-100">
-                <button class="btn btn-dark w-100">Download</button>
-            </div>
-        </div>
+        <app-resume></app-resume>
     </section>
     <section class="my-5 d-flex flex-column justify-content-center align-items-center" id="contact" style="min-height: 100vh;">
-        <h2 class="title h1 text-center">Lets <span class="text-red">Discuss?</span></h2>
-        <div class="row w-100">
-            <div class="col-lg-6">
-                <h3>Get In Touch</h3>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Enter your name</label>
-                        <input type="text" class="form-control" id="name" name="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Enter your email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="username@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Enter your subject</label>
-                        <input type="text" class="form-control" id="subject" name="subject">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Enter your Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="3"></textarea>
-                    </div>
-                    <button class="btn btn-dark w-100"><i class="bi bi-envelope mr-1 h4"></i> Send</button>
-                </form>
-            </div>
-            <div class="contact-cards col-md-6 d-flex flex-column justify-content-center">
-                <a href="https://www.linkedin.com/in/camilo-sanchez-21050b109/"
-                    class="card d-flex flex-row justify-content-left align-items-center my-3">
-                    <i class="bi bi-linkedin ml-5 text-dark h1 text-red"></i>
-                    <div class="ml-5 d-flex justify-content-center align-items-center py-4">
-                        <p class="text-secondary">My profile on LinkedIn</p>
-                    </div>
-                </a>
-                <a href="mailto:camilosanchezdev@gmail.com" class="card d-flex flex-row justify-content-left align-items-center my-3">
-                    <i class="bi bi-envelope-open ml-5 text-dark h1 text-red"></i>
-                    <div class="ml-5 d-flex justify-content-center align-items-center py-4">
-                        <p class="text-secondary">camilosanchezdev@gmail.com</p>
-                    </div>
-                </a>
-                <div class="card d-flex flex-row justify-content-left align-items-center my-3">
-                    <i class="bi bi-geo-alt ml-5 text-dark h1 text-red"></i>
-                    <div class="ml-5 d-flex justify-content-center align-items-center py-4">
-                        <p class="text-secondary">Tucumán, Argentina</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <app-contact class="w-100"></app-contact>
     </section>
 </div>
 <footer class="bg-dark py-5">
