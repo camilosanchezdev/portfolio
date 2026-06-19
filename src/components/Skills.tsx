@@ -20,11 +20,11 @@ export const Skills = () => {
           </Text>
           <Title
             order={2}
+            className="text-primary"
             style={{
               fontSize: 'clamp(26px, 4vw, 40px)',
               fontWeight: 800,
               letterSpacing: '-1px',
-              color: '#F5E6D3',
             }}
           >
             What I work with
@@ -34,8 +34,8 @@ export const Skills = () => {
           {SKILLS.map((s) => (
             <Box
               key={s.label}
+              className="bg-primary"
               style={{
-                background: '#251A12',
                 border: '1px solid #4A3428',
                 borderRadius: 8,
                 padding: '13px 16px',
@@ -44,7 +44,9 @@ export const Skills = () => {
                 justifyContent: 'space-between',
               }}
             >
-              <Text style={{ fontSize: 14, fontWeight: 500, color: '#D4B896' }}>{s.label}</Text>
+              <Text className="text-primary" style={{ fontSize: 14, fontWeight: 500 }}>
+                {s.label}
+              </Text>
               <span
                 style={{
                   fontSize: 11,

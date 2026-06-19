@@ -2,6 +2,7 @@ import { BlinkingCursor } from '@/components/BlinkingCursor.tsx';
 import { PERSONAL_DATA } from '@/constants/personal-data.constant.ts';
 import { scrollTo } from '@/utils/scroll-to.util.ts';
 import { Box, Button, Group, Stack, Text, Title } from '@mantine/core';
+import { Link } from 'react-router';
 
 export const HeroBanner = () => {
   return (
@@ -21,22 +22,22 @@ export const HeroBanner = () => {
         </Text>
         <Title
           order={1}
+          className="text-primary"
           style={{
             fontSize: 'clamp(40px, 7vw, 76px)',
             fontWeight: 800,
             lineHeight: 1.05,
             letterSpacing: '-2.5px',
-            color: '#F5E6D3',
           }}
         >
           {PERSONAL_DATA.name}
           <BlinkingCursor />
         </Title>
         <Text
+          className="text-secondary"
           style={{
-            marginTop: 26,
+            marginTop: 6,
             fontSize: 'clamp(15px, 2.2vw, 19px)',
-            color: '#A89080',
             maxWidth: 520,
             lineHeight: 1.75,
           }}
@@ -52,15 +53,11 @@ export const HeroBanner = () => {
           >
             See what I'm up to
           </Button>
-          <Button
-            size="md"
-            radius="sm"
-            variant="subtle"
-            style={{ color: '#A89080' }}
-            onClick={() => scrollTo('Contact.tsx')}
-          >
-            Get in touch →
-          </Button>
+          <Link to="/contact" style={{ textDecoration: 'none' }}>
+            <Button size="md" radius="sm" variant="subtle" className="text-secondary">
+              Get in touch →
+            </Button>
+          </Link>
         </Group>
       </Stack>
     </Box>

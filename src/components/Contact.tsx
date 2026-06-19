@@ -1,5 +1,6 @@
 import { PERSONAL_DATA } from '@/constants/personal-data.constant.ts';
 import { Anchor, Box, Button, Group, Stack, Text, Title } from '@mantine/core';
+import { Link } from 'react-router';
 
 export const Contact = () => {
   return (
@@ -18,35 +19,37 @@ export const Contact = () => {
         </Text>
         <Title
           order={2}
+          className="text-primary"
           style={{
             fontSize: 'clamp(26px, 5vw, 52px)',
             fontWeight: 800,
             letterSpacing: '-1.5px',
             maxWidth: 520,
-            color: '#F5E6D3',
           }}
         >
           Let's build something together
         </Title>
-        <Text style={{ color: '#A89080', maxWidth: 400, lineHeight: 1.8, fontSize: 15 }}>
+        <Text className="text-secondary" style={{ maxWidth: 400, lineHeight: 1.8, fontSize: 15 }}>
           Open to freelance projects, full-time roles, and interesting collaborations. I reply
           within a day.
         </Text>
-        <Button
-          component="a"
-          href={`mailto:${PERSONAL_DATA.email}`}
-          size="lg"
-          radius="sm"
-          mt={8}
-          style={{
-            background: '#E8720C',
-            color: '#1C1410',
-            fontWeight: 700,
-            letterSpacing: '0.02em',
-          }}
-        >
-          Say hello →
-        </Button>
+        <Link to="/contact" style={{ textDecoration: 'none' }}>
+          <Button
+            component="a"
+            href={`mailto:${PERSONAL_DATA.email}`}
+            size="lg"
+            radius="sm"
+            mt={8}
+            style={{
+              background: '#E8720C',
+              color: '#1C1410',
+              fontWeight: 700,
+              letterSpacing: '0.02em',
+            }}
+          >
+            Say hello →
+          </Button>
+        </Link>
         <Group mt={20}>
           {PERSONAL_DATA.links.map((l) => (
             <Anchor

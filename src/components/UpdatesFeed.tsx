@@ -26,16 +26,16 @@ export const UpdatesFeed = () => {
           </Text>
           <Title
             order={2}
+            className="text-primary"
             style={{
               fontSize: 'clamp(26px, 4vw, 40px)',
               fontWeight: 800,
               letterSpacing: '-1px',
-              color: '#F5E6D3',
             }}
           >
             What I've been working on
           </Title>
-          <Text style={{ color: '#7A6050', fontSize: 14, marginTop: 4 }}>
+          <Text className="text-secondary" style={{ fontSize: 14, marginTop: 4 }}>
             Projects, blog posts, and tutorials — newest first.
           </Text>
         </Stack>
@@ -45,7 +45,7 @@ export const UpdatesFeed = () => {
           {(['all', 'project', 'blog', 'tutorial'] as const).map((f) => (
             <button
               key={f}
-              className={`filter-btn${filter === f ? ' active' : ''}`}
+              className={`bg-secondary text-secondary filter-btn${filter === f ? ' active' : ''}`}
               onClick={() => setFilter(f)}
             >
               {f === 'all' ? 'All' : FEED_META[f].icon + ' ' + FEED_META[f].label}

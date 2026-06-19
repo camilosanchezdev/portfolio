@@ -14,7 +14,7 @@ const theme = {
 };
 
 createRoot(document.getElementById('root')!).render(
-  <MantineProvider theme={theme}>
+  <MantineProvider theme={theme} defaultColorScheme="light">
     <RouterProvider router={router} />
   </MantineProvider>,
 );

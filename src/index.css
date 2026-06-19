@@ -74,3 +74,44 @@ a {
   color: #1C1410;
   font-weight: 700;
 }
+
+/* customization hero banner */
+html[data-mantine-color-scheme='dark'] .text-primary {
+  color: #F5E6D3;
+}
+
+html[data-mantine-color-scheme='light'] .text-primary {
+  color: #373734;
+}
+
+html[data-mantine-color-scheme='dark'] .text-secondary {
+  color: #A89080;
+}
+
+html[data-mantine-color-scheme='light'] .text-secondary {
+  color: #504339;
+}
+
+
+html[data-mantine-color-scheme='dark'] .bg-primary {
+  background-color: #251A12;
+}
+
+html[data-mantine-color-scheme='light'] .bg-primary {
+  background-color: #f3f0f0;
+}
+
+html[data-mantine-color-scheme='dark'] .feed-card:hover {
+  background-color: #3d2d21;
+}
+html[data-mantine-color-scheme='light'] .feed-card:hover {
+  background-color: #e0d8d6;
+}
+
+html[data-mantine-color-scheme='dark'] .bg-secondary {
+  background-color: #251A12;
+}
+
+html[data-mantine-color-scheme='light'] .bg-secondary {
+  background-color: #ffffff;
+}
