@@ -3,14 +3,21 @@ import type { FeedItemType } from '@/types/feed-item.types.ts';
 import { Box, Group, Text } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 
-export function FeedCard({ item }: { item: FeedItemType }) {
+// 1. Accept an onClick handler prop
+interface FeedCardProps {
+  item: FeedItemType;
+  onClick: () => void;
+}
+
+export function FeedCard({ item, onClick }: FeedCardProps) {
   const { t } = useTranslation();
   const meta = FEED_META[item.type];
+
   return (
     <Box
-      component="a"
-      href={item.href}
+      component="div" // 2. Change from "a" to "div" for clean button clicks
       className="bg-primary feed-card"
+      onClick={onClick} // 3. Bind the click handler
       style={{
         display: 'block',
         textDecoration: 'none',

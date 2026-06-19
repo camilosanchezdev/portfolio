@@ -1,4 +1,8 @@
 {
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next"
+  },
   "header": {
     "nav-links": {
       "updates": "Updates",
