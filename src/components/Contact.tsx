@@ -13,21 +13,23 @@ import {
   Container,
   SimpleGrid,
 } from '@mantine/core';
-import { useForm } from '@mantine/form';
+import { useForm as useFormMantine } from '@mantine/form';
 import { useTranslation } from 'react-i18next';
+import { useForm } from '@formspree/react';
 
 export const Contact = () => {
+  const emailKey = import.meta.env.VITE_EMAIL_KEY;
+  const [state, handleSubmit] = useForm(emailKey);
+
   const { t } = useTranslation();
 
-  // 2. Initialize the form controller
-  const form = useForm({
+  const form = useFormMantine({
     initialValues: {
       name: '',
       email: '',
       message: '',
     },
 
-    // Optional validation logic
     validate: {
       name: (value) =>
         value.trim().length < 2 ? t('contact.error.name') || 'Name is too short' : null,
@@ -38,19 +40,15 @@ export const Contact = () => {
     },
   });
 
-  // 3. Handle submission logic (replace with your API endpoint later)
-  const handleSubmit = (values: typeof form.values) => {
-    console.log('Form data submitted:', values);
-    // e.g., fetch('/api/contact', { method: 'POST', body: JSON.stringify(values) })
+  const handleSubmitCustom = (values: typeof form.values) => {
+    handleSubmit(values);
     form.reset();
   };
 
   return (
     <Box component="section" id="contact" style={{ paddingTop: 80, paddingBottom: 100 }}>
       <Container size="lg">
-        {/* SimpleGrid automatically handles stacking on mobile viewports */}
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing={50}>
-          {/* Left Side: Copy and Links */}
           <Stack align="flex-start" style={{ textAlign: 'left' }}>
             <Text
               style={{
@@ -103,22 +101,27 @@ export const Contact = () => {
             </Group>
           </Stack>
 
-          {/* Right Side: The Interactive Contact Form */}
-          <Box component="form" onSubmit={form.onSubmit(handleSubmit)}>
+          <form onSubmit={form.onSubmit(handleSubmitCustom)}>
             <Stack gap="md">
               <TextInput
+                id="name"
+                name="name"
                 label={t('contact.form.name') || 'Name'}
                 required
                 {...form.getInputProps('name')}
               />
 
               <TextInput
+                id="email"
+                name="email"
                 label={t('contact.form.email') || 'Email'}
                 required
                 {...form.getInputProps('email')}
               />
 
               <Textarea
+                id="message"
+                name="message"
                 label={t('contact.form.message') || 'Message'}
                 minRows={4}
                 required
@@ -130,6 +133,7 @@ export const Contact = () => {
                 size="md"
                 radius="sm"
                 mt={8}
+                disabled={state.submitting}
                 style={{
                   background: '#E8720C',
                   color: '#1C1410',
@@ -141,7 +145,7 @@ export const Contact = () => {
                 {t('contact.form.button')} →
               </Button>
             </Stack>
-          </Box>
+          </form>
         </SimpleGrid>
       </Container>
     </Box>
