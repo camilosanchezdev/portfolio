@@ -39,7 +39,16 @@
       "name": "Name",
       "email": "Email",
       "message": "Message",
-      "button": "Send"
+      "button": "Send",
+      "success": {
+        "title": "Message sent",
+        "description": "Thanks for reaching out! I'll get back to you soon."
+      }
+    },
+    "error": {
+      "name": "Please enter your name",
+      "email": "Please enter a valid email address",
+      "message": "Please enter a message"
     }
   }
 }

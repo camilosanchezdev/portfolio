@@ -39,7 +39,16 @@
       "name": "Nombre",
       "email": "Email",
       "message": "Mensaje",
-      "button": "Enviar"
+      "button": "Enviar",
+      "success": {
+        "title": "Mensaje enviado",
+        "description": "¡Gracias por ponerte en contacto! Te responderé pronto."
+      }
+    },
+    "error": {
+      "name": "Por favor, ingresa tu nombre",
+      "email": "Por favor, ingresa una dirección de correo electrónico válida",
+      "message": "Por favor, ingresa un mensaje"
     }
   }
 }
