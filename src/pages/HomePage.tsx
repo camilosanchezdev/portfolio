@@ -8,7 +8,7 @@ import { UpdatesFeed } from '@/components/UpdatesFeed.tsx';
 import { Container, Divider } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
-export default function App() {
+export const HomePage = () => {
   const [drawerOpen, { open, close }] = useDisclosure(false);
 
   return (
@@ -28,4 +28,4 @@ export default function App() {
       </Container>
     </>
   );
-}
+};

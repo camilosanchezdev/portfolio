@@ -2,6 +2,7 @@ import { NAV_LINKS } from '@/constants/nav-links.constant.ts';
 import { PERSONAL_DATA } from '@/constants/personal-data.constant.ts';
 import { scrollTo } from '@/utils/scroll-to.util.ts';
 import { Box, Burger, Button, Container, Group } from '@mantine/core';
+import { Link } from 'react-router';
 
 interface HeaderProps {
   drawerOpen: boolean;
@@ -44,22 +45,23 @@ export const Header = ({ drawerOpen, open }: HeaderProps) => {
                 {l}
               </button>
             ))}
-            <Button
-              size="xs"
-              radius="sm"
-              variant="outline"
-              style={{
-                borderColor: '#E8720C',
-                color: '#E8720C',
-                fontSize: 12,
-                letterSpacing: '0.06em',
-                textTransform: 'uppercase',
-                fontWeight: 600,
-              }}
-              onClick={() => scrollTo('Contact.tsx')}
-            >
-              Hire me
-            </Button>
+            <Link to="/contact" style={{ textDecoration: 'none' }}>
+              <Button
+                size="xs"
+                radius="sm"
+                variant="outline"
+                style={{
+                  borderColor: '#E8720C',
+                  color: '#E8720C',
+                  fontSize: 12,
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  fontWeight: 600,
+                }}
+              >
+                Hire me
+              </Button>
+            </Link>
           </Group>
           <Burger
             opened={drawerOpen}
