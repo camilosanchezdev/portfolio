@@ -1,8 +1,11 @@
 import { LEVEL_COLOR } from '@/constants/level-color.constant.ts';
 import { SKILLS } from '@/constants/skills.constant.ts';
 import { Box, SimpleGrid, Stack, Text, Title } from '@mantine/core';
+import { useTranslation } from 'react-i18next';
 
 export const Skills = () => {
+  const { t } = useTranslation();
+
   return (
     <Box component="section" id="skills" style={{ paddingTop: 80, paddingBottom: 60 }}>
       <Stack>
@@ -16,7 +19,7 @@ export const Skills = () => {
               textTransform: 'uppercase',
             }}
           >
-            Skills
+            {t('skills.hint-text')}
           </Text>
           <Title
             order={2}
@@ -27,7 +30,7 @@ export const Skills = () => {
               letterSpacing: '-1px',
             }}
           >
-            What I work with
+            {t('skills.title')}
           </Title>
         </Stack>
         <SimpleGrid cols={2} spacing="sm">

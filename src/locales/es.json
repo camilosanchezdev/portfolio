@@ -1,0 +1,41 @@
+{
+  "header": {
+    "nav-links": {
+      "updates": "Novedades",
+      "skills": "Habilidades",
+      "contact": "Contáctame"
+    }
+  },
+  "hero-banner": {
+    "hint-text": "Desarrollador de software",
+    "subtitle": "Desarrollo software rápido y confiable: APIs limpias, interfaces de usuario pulidas y soluciones que realmente se implementan.",
+    "primary-button": "Mira en qué estoy trabajando",
+    "secondary-button": "Ponte en contacto"
+  },
+  "updates-feed": {
+    "hint-text": "Últimas actualizaciones",
+    "title": "Mis proyectos recientes",
+    "description": "Proyectos, artículos de blog y tutoriales; los más recientes primero.",
+    "filters": {
+      "all": "Todos",
+      "projects": "Proyectos",
+      "blog-posts": "Artículos de blog",
+      "tutorials": "Tutoriales"
+    }
+  },
+  "skills": {
+    "hint-text": "Habilidades",
+    "title": "Con qué trabajo"
+  },
+  "contact": {
+    "hint-text": "Ponte en contacto",
+    "title": "Construyamos algo juntos",
+    "description": "Estoy abierto a proyectos y colaboraciones interesantes. Respondo dentro de un día.",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje",
+      "button": "Enviar"
+    }
+  }
+}

@@ -4,6 +4,7 @@ import './index.css';
 import { RouterProvider } from 'react-router';
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
+import './i18n';
 
 const theme = {
   colorScheme: 'dark' as const,

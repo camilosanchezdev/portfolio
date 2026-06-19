@@ -2,19 +2,14 @@ import { Contact } from '@/components/Contact.tsx';
 import { Footer } from '@/components/Footer.tsx';
 import { Header } from '@/components/Header.tsx';
 import { HeroBanner } from '@/components/HeroBanner.tsx';
-import { MobileDrawer } from '@/components/MobileDrawer.tsx';
 import { Skills } from '@/components/Skills.tsx';
 import { UpdatesFeed } from '@/components/UpdatesFeed.tsx';
 import { Container, Divider } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
 
 export const HomePage = () => {
-  const [drawerOpen, { open, close }] = useDisclosure(false);
-
   return (
     <>
-      <Header open={open} drawerOpen={drawerOpen} />
-      <MobileDrawer drawerOpen={drawerOpen} close={close} />
+      <Header />
 
       <Container size="lg" pt={80}>
         <HeroBanner />

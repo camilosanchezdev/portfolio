@@ -1,5 +1,4 @@
 import { MainLayout } from '@/layout/MainLayout.tsx';
-import { ContactPage } from '@/pages/ContactPage.tsx';
 import { HomePage } from '@/pages/HomePage.tsx';
 import { createBrowserRouter, type RouteObject } from 'react-router';
 
@@ -11,10 +10,6 @@ const routes: RouteObject[] = [
       {
         index: true,
         element: <HomePage />,
-      },
-      {
-        path: 'contact',
-        element: <ContactPage />,
       },
 
       {

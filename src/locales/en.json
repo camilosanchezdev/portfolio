@@ -1,0 +1,41 @@
+{
+  "header": {
+    "nav-links": {
+      "updates": "Updates",
+      "skills": "Skills",
+      "contact": "Contact"
+    }
+  },
+  "hero-banner": {
+    "hint-text": "Software developer",
+    "subtitle": "I build fast, reliable software — clean APIs, polished UIs, and things that actually ship.",
+    "primary-button": "See what I'm up to",
+    "secondary-button": "Get in touch"
+  },
+  "updates-feed": {
+    "hint-text": "Latest updates",
+    "title": "What I've been working on",
+    "description": "Projects, blog posts, and tutorials — newest first.",
+    "filters": {
+      "all": "All",
+      "projects": "Projects",
+      "blog-posts": "Blog posts",
+      "tutorials": "Tutorials"
+    }
+  },
+  "skills": {
+    "hint-text": "Skills",
+    "title": "What I work with"
+  },
+  "contact": {
+    "hint-text": "Get in touch",
+    "title": "Let's build something together",
+    "description": "Open to freelance projects and interesting collaborations. I reply within a day.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "button": "Send"
+    }
+  }
+}

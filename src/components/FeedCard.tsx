@@ -1,8 +1,10 @@
 import { FEED_META } from '@/constants/feed-meta.constant.ts';
 import type { FeedItemType } from '@/types/feed-item.types.ts';
 import { Box, Group, Text } from '@mantine/core';
+import { useTranslation } from 'react-i18next';
 
 export function FeedCard({ item }: { item: FeedItemType }) {
+  const { t } = useTranslation();
   const meta = FEED_META[item.type];
   return (
     <Box
@@ -33,7 +35,7 @@ export function FeedCard({ item }: { item: FeedItemType }) {
               fontFamily: 'monospace',
             }}
           >
-            {meta.label}
+            {t(meta.label)}
           </Text>
         </Group>
         <Text style={{ fontSize: 12, color: '#7A6050', fontFamily: 'monospace' }}>{item.date}</Text>

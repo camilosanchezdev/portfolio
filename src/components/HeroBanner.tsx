@@ -2,9 +2,10 @@ import { BlinkingCursor } from '@/components/BlinkingCursor.tsx';
 import { PERSONAL_DATA } from '@/constants/personal-data.constant.ts';
 import { scrollTo } from '@/utils/scroll-to.util.ts';
 import { Box, Button, Group, Stack, Text, Title } from '@mantine/core';
-import { Link } from 'react-router';
+import { useTranslation } from 'react-i18next';
 
 export const HeroBanner = () => {
+  const { t } = useTranslation();
   return (
     <Box component="section" style={{ paddingTop: 100, paddingBottom: 72 }}>
       <Stack>
@@ -18,7 +19,7 @@ export const HeroBanner = () => {
             marginBottom: 20,
           }}
         >
-          {PERSONAL_DATA.role}
+          {t('hero-banner.hint-text')}
         </Text>
         <Title
           order={1}
@@ -42,7 +43,7 @@ export const HeroBanner = () => {
             lineHeight: 1.75,
           }}
         >
-          {PERSONAL_DATA.tagline}
+          {t('hero-banner.subtitle')}
         </Text>
         <Group mt={36}>
           <Button
@@ -51,13 +52,18 @@ export const HeroBanner = () => {
             style={{ background: '#E8720C', color: '#1C1410', fontWeight: 700 }}
             onClick={() => scrollTo('Updates')}
           >
-            See what I'm up to
+            {t('hero-banner.primary-button')}
           </Button>
-          <Link to="/contact" style={{ textDecoration: 'none' }}>
-            <Button size="md" radius="sm" variant="subtle" className="text-secondary">
-              Get in touch →
-            </Button>
-          </Link>
+
+          <Button
+            size="md"
+            radius="sm"
+            variant="subtle"
+            className="text-secondary"
+            onClick={() => scrollTo('contact')}
+          >
+            {t('hero-banner.secondary-button')} →
+          </Button>
         </Group>
       </Stack>
     </Box>

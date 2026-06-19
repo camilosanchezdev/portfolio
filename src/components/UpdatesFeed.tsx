@@ -4,8 +4,10 @@ import { FEED } from '@/constants/feed.constant.ts';
 import type { FeedType } from '@/types/feed.types.ts';
 import { Box, Group, Stack, Text, Title } from '@mantine/core';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const UpdatesFeed = () => {
+  const { t } = useTranslation();
   const [filter, setFilter] = useState<FeedType | 'all'>('all');
 
   const filtered = filter === 'all' ? FEED : FEED.filter((f) => f.type === filter);
@@ -22,7 +24,7 @@ export const UpdatesFeed = () => {
               textTransform: 'uppercase',
             }}
           >
-            Latest updates
+            {t('updates-feed.hint-text')}
           </Text>
           <Title
             order={2}
@@ -33,10 +35,10 @@ export const UpdatesFeed = () => {
               letterSpacing: '-1px',
             }}
           >
-            What I've been working on
+            {t('updates-feed.title')}
           </Title>
           <Text className="text-secondary" style={{ fontSize: 14, marginTop: 4 }}>
-            Projects, blog posts, and tutorials — newest first.
+            {t('updates-feed.description')}
           </Text>
         </Stack>
 
@@ -48,7 +50,9 @@ export const UpdatesFeed = () => {
               className={`bg-secondary text-secondary filter-btn${filter === f ? ' active' : ''}`}
               onClick={() => setFilter(f)}
             >
-              {f === 'all' ? 'All' : FEED_META[f].icon + ' ' + FEED_META[f].label}
+              {f === 'all'
+                ? t('updates-feed.filters.all')
+                : FEED_META[f].icon + ' ' + t(FEED_META[f].label)}
             </button>
           ))}
         </Group>
